@@ -1,11 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { AudioFeatures, PartialSearchResult, SimplifiedArtist, SpotifyApi, Track } from '@spotify/web-api-ts-sdk';
 import { ConfigService } from '@nestjs/config';
-import { Song as LyricSearch } from 'genius-lyrics';
+import { Client, Song as LyricSearch } from 'genius-lyrics';
 import { TrackInfo } from './entities/trackInfo.entity';
 import { Song } from './entities/song.entity';
 import { ChordService } from 'src/chord/chord.service';
-import { Client } from 'genius-lyrics';
 import { Chord } from 'src/chord/entities/chord.entity';
 
 @Injectable()
